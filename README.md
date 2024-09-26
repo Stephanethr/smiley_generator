@@ -7,10 +7,6 @@ Bienvenue dans le projet **Smiley Generator** développé par le groupe **Clemas
 - [Présentation](#présentation)
 - [Fonctionnalités](#fonctionnalités)
 - [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Structure du projet](#structure-du-projet)
-- [Contribution](#contribution)
-- [Licence](#licence)
 
 ## Présentation
 
