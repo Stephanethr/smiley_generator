@@ -1,6 +1,6 @@
 # Smiley Generator Project - Clemaste
 
-**Bienvenue dans le projet Smiley Generator développé par le groupe Clemaste !** Ce projet permet de générer des smileys personnalisés en fonction des émotions perçues à travers un texte donné, le tout via une interface web complète, gérée par Django.
+**Bienvenue dans le projet Smiley Generator développé par le groupe Clemaste !** Ce projet permet de générer des smileys personnalisés en fonction des émotions perçues à travers un texte donné.
 
 ## Table des matières
 
@@ -11,7 +11,7 @@
 
 ## Présentation
 
-Le projet Smiley Generator est une application web innovante où les utilisateurs peuvent générer des smileys basés sur différentes émotions. Grâce à une analyse du texte fourni, l'application détermine l'émotion prédominante et génère le smiley approprié. Le backend et le frontend sont tous deux développés avec Django.
+Le projet Smiley Generator est une application python où les utilisateurs peuvent générer des smileys basés sur différentes émotions. Grâce à une analyse du texte fourni, l'application détermine l'émotion prédominante et génère le smiley approprié.
 
 **Groupe de développement : Clemaste**
 
@@ -29,9 +29,8 @@ Le projet Smiley Generator est une application web innovante où les utilisateur
 ## Technologies Utilisées
 
 - **Langage** : Python
-- **Framework** : Django (pour le backend)
 - **Frontend** : HTML, CSS, JavaScript (avec Bootstrap pour le design responsive)
-- **Base de données** : SQLite (ou PostgreSQL pour des besoins plus avancés)
+- **Base de données** : SQLite
 - **Intelligence Artificielle** : Bibliothèques comme NLTK ou spaCy pour l'analyse de texte et la détection des émotions
 - **Contrôle de version** : Git (avec GitHub pour le dépôt)
 
