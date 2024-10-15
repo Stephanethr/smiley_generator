@@ -17,7 +17,7 @@ Bienvenue dans le projet **Smiley Generator** développé par le groupe **Clemas
 Le projet **Smiley Generator** est une application web complète où les utilisateurs peuvent générer des smileys en fonction de différentes émotions. Le backend et le frontend sont tous deux réalisés avec Django.
 
 ### Groupe de développement : **Clemaste**
-- **Clément** : Développeur Full-Stack
+- **Clémentine** : Développeur Full-Stack
 - **Matthieu** : Développeur Full-Stack
 - **Stéphane** : Développeur Full-Stack
 
