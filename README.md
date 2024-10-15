@@ -15,7 +15,7 @@ Le projet Smiley Generator est une application web innovante où les utilisateur
 
 **Groupe de développement : Clemaste**
 
-- **Clément** : Développeur Full-Stack
+- **Clémentine** : Développeur Full-Stack
 - **Matthieu** : Développeur Full-Stack
 - **Stéphane** : Développeur Full-Stack
 
