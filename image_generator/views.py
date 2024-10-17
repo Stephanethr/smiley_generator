@@ -5,6 +5,7 @@ import base64
 from io import BytesIO
 from django.http import JsonResponse
 from django.shortcuts import render
+import platform
 
 
 # Fonction pour afficher la page index
@@ -21,7 +22,12 @@ def generate_image_view(request):
 
     # Charger et utiliser le modèle de génération d'image
     try:
-        device = "cuda" if torch.cuda.is_available() else "cpu"
+        system = platform.system()
+        if system == "Windows":
+            device = "cuda" if torch.cuda.is_available() else "cpu"
+        else:
+            device = "mps" if torch.backends.mps.is_available() else "cpu"
+
         model_id = "CompVis/stable-diffusion-v1-4"
         pipe = StableDiffusionPipeline.from_pretrained(model_id)
         pipe = pipe.to(device)
