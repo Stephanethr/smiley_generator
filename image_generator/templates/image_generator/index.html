@@ -10,15 +10,26 @@
 <body>
 <div class="container">
     <h1>Smiley Generator</h1>
+
+    <!-- Champ de texte pour entrer le prompt -->
     <input type="text" id="prompt" class="prompt-input" placeholder="Enter your prompt here">
-    <button class="generate-btn" onclick="generateImage()">Generate</button>
+
+    <!-- Bouton pour générer l'image -->
+    <button class="generate-btn" onclick="generateImage()">Generate 💫</button>
+
+    <!-- Loader, caché par défaut -->
     <div id="loader" style="display:none;">
         <img src="{% static 'image/load.gif' %}" alt="Loading..."> <!-- Chemin vers votre image de chargement -->
     </div>
+
+    <!-- Conteneur pour afficher l'image générée -->
     <div class="image-container" id="imageContainer"></div>
+
+    <!-- Bouton pour sauvegarder l'image, caché par défaut -->
     <button id="saveBtn" class="save-btn" style="display:none" onclick="saveImage()">Save Image</button>
 </div>
 
+<!-- Inclusion du fichier JavaScript -->
 <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

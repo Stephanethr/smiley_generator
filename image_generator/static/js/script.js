@@ -7,12 +7,21 @@ function generateImage() {
         return;
     }
 
-    // Afficher le loader
+    // Clear previous image and hide the save button
+    const imgContainer = document.getElementById('imageContainer');
+    imgContainer.innerHTML = '';  // Clear the container before generating the new image
+    const saveBtn = document.getElementById('saveBtn');
+    if (saveBtn) {
+        saveBtn.style.display = 'none';
+    }
+
+    // Show the loader
     loader.style.display = 'block';
 
-    // Encode le prompt pour l'URL
+    // Encode the prompt for the URL
     const encodedPrompt = encodeURIComponent(prompt);
 
+    // Fetch the generated image
     fetch(`/image-generator/generate/?prompt=${encodedPrompt}`)
         .then(response => {
             if (!response.ok) {
@@ -21,28 +30,25 @@ function generateImage() {
             return response.json();
         })
         .then(data => {
-            // Cacher le loader
+            // Hide the loader
             loader.style.display = 'none';
 
             if (data.error) {
                 alert(data.error);
             } else {
-                const imgContainer = document.getElementById('imageContainer');
                 const img = document.createElement('img');
                 img.src = 'data:image/png;base64,' + data.image_data;
                 img.id = 'generatedImage';
-                imgContainer.innerHTML = ''; // Vider le conteneur avant d'ajouter l'image
                 imgContainer.appendChild(img);
 
-                // Afficher le bouton de sauvegarde
-                const saveBtn = document.getElementById('saveBtn');
+                // Show the save button
                 if (saveBtn) {
                     saveBtn.style.display = 'inline-block';
                 }
             }
         })
         .catch(error => {
-            // Cacher le loader en cas d'erreur
+            // Hide the loader in case of an error
             loader.style.display = 'none';
             console.error('Error generating image:', error);
             alert('Error generating image. Please try again.');

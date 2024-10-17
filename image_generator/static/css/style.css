@@ -18,6 +18,7 @@ body {
     font-size: 16px;
     width: 300px;
     margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .generate-btn {
@@ -57,7 +58,6 @@ img {
     display: none; /* Caché par défaut */
     width: 3px;
     height: 3px;
-    /*margin: 20px auto;  Centrer le logo */
 }
 
 @keyframes spin {
