@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smiley Generator</title>
+    <title>SMILEY GENERATOR</title>
     {% load static %} <!-- Charger la balise static -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <div class="container">
-        <h1>Smiley Generator</h1>
-        <input type="text" id="prompt" class="prompt-input" placeholder="Enter your prompt here">
-        <button class="generate-btn" onclick="generateImage()">Generate</button>
-
-        <div class="image-container" id="imageContainer"></div>
-        <button id="saveBtn" class="save-btn" style="display:none" onclick="saveImage()">Save Image</button>
+<div class="container">
+    <h1>Smiley Generator</h1>
+    <input type="text" id="prompt" class="prompt-input" placeholder="Enter your prompt here">
+    <button class="generate-btn" onclick="generateImage()">Generate</button>
+    <div id="loader" style="display:none;">
+        <img src="{% static 'image/load.gif' %}" alt="Loading..."> <!-- Chemin vers votre image de chargement -->
     </div>
+    <div class="image-container" id="imageContainer"></div>
+    <button id="saveBtn" class="save-btn" style="display:none" onclick="saveImage()">Save Image</button>
+</div>
 
-    <script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
