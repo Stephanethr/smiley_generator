@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smiley Generator</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% load static %} <!-- Charger la balise static -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <div class="container">
@@ -16,7 +17,6 @@
         <button id="saveBtn" class="save-btn" style="display:none" onclick="saveImage()">Save Image</button>
     </div>
 
-    <!-- Inclusion du fichier JavaScript -->
-    <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
