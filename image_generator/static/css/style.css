@@ -1,5 +1,5 @@
 body {
-    background-color: #3a3066;
+    background-color: #2a2826;
     color: white;
     font-family: Arial, sans-serif;
     display: flex;
@@ -57,7 +57,7 @@ img {
     display: none; /* Caché par défaut */
     width: 3px;
     height: 3px;
-    margin: 20px auto; /* Centrer le logo */
+    /*margin: 20px auto;  Centrer le logo */
 }
 
 @keyframes spin {
