@@ -33,14 +33,24 @@ body {
     background-color: #a18cff;
 }
 
-.image-container {
+/* .image-container {
     margin-top: 20px;
 }
 
 img {
     max-width: 100%;
     border-radius: 10px;
+} */
+
+
+.image-container img {
+    max-width: 300px; /* ou toute autre valeur qui convient */
+    max-height: 300px; /* ou toute autre valeur qui convient */
+    width: auto; /* Maintenir le ratio */
+    height: auto; /* Maintenir le ratio */
+    border-radius: 10px;
 }
+
 
 .save-btn {
     margin-top: 10px;
