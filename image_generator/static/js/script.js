@@ -1,6 +1,8 @@
 function generateImage() {
     const prompt = document.getElementById('prompt').value;
     const loader = document.getElementById('loader');
+    const stopBtn = document.getElementById('stop');
+    const generateBtn = document.getElementById('generate');
 
     if (!prompt) {
         alert('Please enter a prompt!');
@@ -9,14 +11,16 @@ function generateImage() {
 
     // Clear previous image and hide the save button
     const imgContainer = document.getElementById('imageContainer');
-    imgContainer.innerHTML = '';  // Clear the container before generating the new image
+    imgContainer.innerHTML = '';
     const saveBtn = document.getElementById('saveBtn');
     if (saveBtn) {
         saveBtn.style.display = 'none';
     }
 
-    // Show the loader
+    // Show the loader and replace generate button with stop button
     loader.style.display = 'block';
+    generateBtn.style.display = 'none';
+    stopBtn.style.display = 'inline';
 
     // Encode the prompt for the URL
     const encodedPrompt = encodeURIComponent(prompt);
@@ -30,8 +34,10 @@ function generateImage() {
             return response.json();
         })
         .then(data => {
-            // Hide the loader
+            // Hide the loader and restore the generate button
             loader.style.display = 'none';
+            stopBtn.style.display = 'none';
+            generateBtn.style.display = 'inline';
 
             if (data.error) {
                 alert(data.error);
@@ -48,11 +54,27 @@ function generateImage() {
             }
         })
         .catch(error => {
-            // Hide the loader in case of an error
+            // Hide the loader and restore the generate button in case of an error
             loader.style.display = 'none';
+            stopBtn.style.display = 'none';
+            generateBtn.style.display = 'inline';
+
             console.error('Error generating image:', error);
             alert('Error generating image. Please try again.');
         });
+}
+
+// Fonction pour arrêter la génération
+function stopGeneration() {
+    const loader = document.getElementById('loader');
+    const stopBtn = document.getElementById('stop');
+    const generateBtn = document.getElementById('generate');
+
+    // Hide loader and stop button, show generate button
+    loader.style.display = 'none';
+    stopBtn.style.display = 'none';
+    generateBtn.style.display = 'inline';
+
 }
 
 function saveImage() {

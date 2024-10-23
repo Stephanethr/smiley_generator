@@ -9,7 +9,6 @@ Bienvenue dans le projet Smiley Generator développé par le groupe Clemaste ! C
 - [Technologies Utilisées](#technologies-utilisées)
 - [Installation](#installation)
 - [Utilisation](#utilisation)
-- [Contributions](#contributions)
 - [Contact](#contact)
 
 ## Présentation
@@ -87,13 +86,9 @@ Le projet Smiley Generator est une application Python où les utilisateurs peuve
 - Cliquez sur le bouton "Generate" pour générer le smiley.
 - L'image générée apparaîtra ci-dessus, avec la possibilité de l'enregistrer.
 
-## Contributions
-
-Les contributions au projet sont les bienvenues ! N'hésitez pas à soumettre des demandes de fonctionnalités ou à corriger des bogues en ouvrant des issues sur le dépôt GitHub.
-
 ## Contact
 
-Pour toute question ou demande d'information, veuillez contacter les membres du groupe Clemaste via leur profil GitHub.
+Pour toute question ou demande d'information, veuillez contacter les contributeurs du projet via leur profil GitHub.
 
 ---
 

@@ -17,8 +17,8 @@
     <input type="text" id="prompt" class="prompt-input" placeholder="Enter your prompt here">
 
     <!-- Bouton pour générer l'image -->
-    <button class="generate-btn" onclick="generateImage()">Generate 💫</button>
-
+    <button id="generate" class="generate-btn button" onclick="generateImage()">Generate 💫</button>
+    <button id="stop" class="stop button" onclick="stopGeneration()" style="display: none;">Stop</button>
     <!-- Loader, caché par défaut -->
     <div id="loader" style="display:none;">
         <img src="{% static 'image/load.gif' %}" alt="Loading..."> <!-- Chemin vers votre image de chargement -->
