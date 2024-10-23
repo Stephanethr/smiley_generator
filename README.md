@@ -83,6 +83,8 @@ Le projet **Smiley Generator** est une application web complète où les utilisa
 
     ```bash
     pip install -r requirements.txt
+    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+    pip install python-dotenv
     ```
 
 4. Exécutez le serveur de développement Django :
